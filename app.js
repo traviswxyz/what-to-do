@@ -15,12 +15,13 @@ const urlParams = new URLSearchParams(window.location.search);
 
 
 btn.addEventListener("click", async function() {
-  if(urlParams.get("pexels") != ""){
+  if(urlParams.get("pexels") !== null){
     apiKey.value=urlParams.get("pexels");
   }
+  
   if(apiKey.value==""){
     apiKey.style.backgroundColor="pink";
-    apiKey.value="Paste Pexels API Key here";
+    alert("Input Pexels API Key into highlighted text field");
     return;
   }
 
