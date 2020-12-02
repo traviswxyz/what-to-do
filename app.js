@@ -21,6 +21,7 @@ btn.addEventListener("click", async function() {
   if(apiKey.value==""){
     apiKey.style.backgroundColor="pink";
     apiKey.value="Paste Pexels API Key here";
+    return;
   }
 
   apiKey.style.backgroundColor="";
