@@ -10,12 +10,17 @@ const choiceBox2 = document.getElementById("choice2");
 const choiceBox3 = document.getElementById("choice3");
 const count = document.getElementById("count-badge");
 const apiKey = document.getElementById("apiKey");
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(window.location.search);
+
 
 btn.addEventListener("click", async function() {
+  if(urlParams.get("pexels") != ""){
+    apiKey.value=urlParams.get("pexels");
+  }
   if(apiKey.value==""){
     apiKey.style.backgroundColor="pink";
     apiKey.value="Paste Pexels API Key here";
-    return;
   }
 
   apiKey.style.backgroundColor="";
