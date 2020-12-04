@@ -45,7 +45,6 @@
     <a class="p-2 text-dark" href="#">Pricing</a> -->
   </nav>
   <input id="apiKey" name="apiKey" type="text" value="">
-  <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
 </div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -83,12 +82,29 @@
     </div>
   </div>
   <div class="text-center">
-    <button class="btn btn-outline-primary" id="btn">
+    <button class="btn btn-outline-primary mb-3" id="btn">
       New Suggestion
       <span id="count-badge" class="badge badge-light"></span>
     </button>
   </div>
 
+  <!-- <button class="btn btn-outline-primary" type="button" data-toggle="collapse" href="#historyTable" aria-controls="#historyTable" aria-expanded="false">History</button> -->
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#historyTable" aria-expanded="false" aria-controls="historyTable">History</button>
+  <div id="historyTable" class="collapse">
+    <table class="table table-hover mt-3">
+      <caption>History of suggestions generated</caption>
+      <thead>
+        <tr>
+          <th scope="col">Suggestion</th>
+          <th scope="col">Activity</th>
+          <th scope="col">Place</th>
+          <th scope="col">Food</th>
+        </tr>
+      </thead>
+      <tbody id="history">
+      </tbody>
+    </table>
+  </div>
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <script src="app.js"></script>
   </footer>
